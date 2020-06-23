@@ -7,3 +7,5 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 * Gehe deinen eigenen Weg und lass dich von anderen nicht provozieren
 
 > Doc, ich bin zurück aus der Zukunft.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Zur%C3%BCck_in_die_zukunft_logo.svg/280px-Zur%C3%BCck_in_die_zukunft_logo.svg.png"/>
