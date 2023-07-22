@@ -5,56 +5,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-<h1 style="color:indianred;">Hello git World!!</h1>
-<h3>Typischer Ablauf, wenn online Repo existiert</h3>
-<ol>
-    <li>git clone [url]: zum Klonen eines online Repos</li>
-    <li>Committen</li>
-    <ul>
-        <li>Entweder</li>
-        <ol><li>git add [filename]: nur diese eine Datei wird beim nächsten Commit gespeichert</li>
-            <li>git commit -m "message": das ist quasi das Gleiche wie das "Speichern" einer Datei</li></ol>
-        <li>oder</li>
-        <ul><li>git commit -am "message": alle veränderten Dateien werden committet</li></ul>
-    </ul>
-    <li>git push: damit werden die Änderungen tatsächlich erst online aktiv</li>
-</ol>
-<h3>Wichtigste weitere Befehle</h3>
-<ul>
-    <li>git status (nach dem commit steht etwas von "1 commit ahead" oder so)</li>
-    <li>git pull: Gegenteil von git push, d.h. die Online-Version auf meinen Rechner heruntergeladen</li>
-    <li>Merge Conflicts</li>
-    <ul>
-        <li>Ich mache eine Änderung (mit commit ohne push?)</li>
-        <li>Gleichzeitig macht jemand anderes Änderungen und committet</li>
-        <li>Wenn ich jetzt pullen will, gibt es ggfs. einen merge conflict</li>
-        <li>im Editor (WebStorm) ist der Head meiner Version mit <<< Zeichen und</li>
-        <li>nach den === Zeichen</li>
-        <li>die Online Version, die mit >>> endet</li>
-        <li>Ich muss nun manuell die beiden Versionen zusammenführen im Webstorm</li>
-        <li>und nochmal einen commit und push machen mit den konsolidierten Änderungen</li>
-        <li>Danach sind alle drei commits auf GitHub sichtbar</li>
-    </ul>
-    <li>Log</li>
-    <ul>
-        <li>git log: mit q können wir den log dann wieder verlassen</li>
-        <li>git log --oneline: Log in kompakter Form</li>
-    </ul>
-    <li>Reset</li>
-    <ul>
-        <li>git reset --hard [commit hash]: zu bestimmten Commit zurück</li>
-        <li>git reset --hard origin/master: zur aktuellen Remote Version zurück </li>
-    </ul>
-    <li>Branching</li>
-    <ul>
-        <li>der "Head" zeigt auf den aktuellen Branch, wo ich arbeite und kann verändert werden</li>
-        <li>git branch: zeigt mir den aktuellen Branch an</li>
-        <li>git checkout -b [branch_name]: neuer Branch wird erstellt</li>
-        <li>git checkout [branche_name]: hier wechselt man den Branch</li>
-        <li>wenn ich vom neuen Branch einen commit machen, muss ein zusätzlicher Befehl ausgeführt werden, sodass ein
-        Merge Pull Request in GutHub erstellt wird. Den kann ich auf GitHub easy bearbeiten und alles zusammenführen.</li>
-        <li>git merge [branch name]: wenn ich auf dem main bin, kann ich einen anderen mergen, aber Konflikte sind möglich</li>
-    </ul>
-</ul>
+<a href="git.html">Git Notizen</a>
 </body>
 </html>
