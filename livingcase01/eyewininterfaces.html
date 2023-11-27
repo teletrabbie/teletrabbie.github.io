@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>EyeWin Schnittstellen</title>
@@ -12,6 +12,7 @@
         min-height: 100vh; /* Set minimum height to 100% of the viewport height */
     }
     main {
+        padding-top: 20px;
         flex: 1; /* Grow and take available space */
     }
   </style>
@@ -25,11 +26,46 @@
     </div>
 </nav>
 
+<!-- Main Content -->
 <main>
 <div class = "container">
-Hier folgen bald weitere Informationen.
+    <p class="text-secondary fs-3">Einleitung</p>
+    <ul>
+        <li>Erstellt von Christian Franke im Herbst 2023</li>
+        <li>Die Applikation entstand im Rahmen des Moduls "Living Case 1" im Bachelorstudiengang Medizin-Informatik an der Berner Fachhochschule.</li>
+        <li>Auftraggeber ist <a href="https://eschmann-contactlinsen.ch/" target="_blank">Eschmann-Contactlinsen AG</a> aus Bern.</li>
+    </ul>
+    <p class="text-secondary fs-3">Benutzerdokumentation</p>
+    <ul>
+        <li>Eine (im EyeWin) vorhandene Kundennummer kann im Such-Textfeld eingegeben und gesucht werden.</li>
+        <li>Die Eingabe der Kundennummer kamm mit der Taste "Enter" oder Klick auf den Button "Suchen" bestätigt werden.</li>
+        <li>Falls die Kundennummer vorhanden ist, werden die Personendaten (Name, Vorname, Geburtstag und Geschlecht) angezeigt.</li>
+        <li>Wenn die erwarteten Daten erscheinen, können die Daten an die angeschlossenen Diagnostikgeräte übertragen werden.</li>
+        <li>Aktuell werden die Kundendaten nur an die Schnittstelle der <a href="https://www.pentacam.com/de" target="_blank">Oculus Pentacam</a> übertragen.</li>
+    </ul>
+    <p class="text-secondary fs-3">Technisches</p>
+    <ul>
+        <li>Das Java-Maven-Projekt wurde mit IntelliJ IDEA 2022.1.2 realisiert.</li>
+        <li>Dependencies</li>
+        <ul>
+            <li>org.openjfx</li>
+            <li>org.junit.jupiter</li>
+            <li>net.sf.ucanaccess</li>
+            <li>com.healthmarketscience.jackcess</li>
+        </ul>
+        <li>Plugins</li>
+        <ul>
+            <li>org.apache.maven.plugins</li>
+            <li>maven-assembly-plugin</li>
+            <li>org.openjfx</li>
+        </ul>
+        <li>Das FX-Projekt wurde als MVC mit Scene Builder 2.0 für die View realisiert.</li>
+    </ul>
+
 </div>
 </main>
+
+<!-- Footer -->
 <footer class="bg-secondary text-light text-center py-3">
     <p>Made in 2023 by CF. All rights reserved.</p>
 </footer>
