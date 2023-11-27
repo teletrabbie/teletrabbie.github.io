@@ -6,24 +6,37 @@
     <title>My personal GitHub website</title>
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+        }
+
+        main {
+            flex: 1; /* Grow and take available space */
+        }
+    </style>
 </head>
 <body>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-light bg-secondary text-light">
+    <div class="container">
+        <h2>Some projects during my studies @BFH</h2>
+    </div>
+</nav>
+
+<main>
 <div class="container-xxl">
     <div class="row">
-<!--        <div class="col-sm-6 mt-3 mb-3 mb-sm-0">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Curriculum Vitae</h5>
-                    <p class="card-text">A very short history of my life.</p>
-                    <a class="btn btn-secondary" href="cv.html">Go to my CV</a>
-                </div>
-            </div>
-        </div>-->
+
         <div class="col-sm-6 mt-3 mb-3 mb-sm-0">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">EyeWin Interfaces</h5>
-                    <p class="card-text">Dokumentation der Schnittstellen, die im Rahmen eines Projektes mit Eschmann-Contactlinsen AG entstanden sind.</p>
+                    <p class="card-text">Documentation of the interfaces created as part of a project with Eschmann-Contactlinsen AG, Berne.</p>
                     <a class="btn btn-secondary" href="livingcase01/eyewininterfaces.html">Go to EyeWin Interfaces</a>
                 </div>
             </div>
@@ -32,7 +45,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Working with git</h5>
-                    <p class="card-text">Git has a lot of possibilities. Working with git can be confusing.
+                    <p class="card-text">Git has a lot of possibilities, but working with git can be confusing.
                         That's why I collected the most important functions.</p>
                     <a class="btn btn-secondary" href="git.html">Go to my git notes</a>
                 </div>
@@ -48,7 +61,21 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-6 mt-3 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Curriculum Vitae</h5>
+                    <p class="card-text">A very short history of my life.</p>
+                    <br>
+                    <a class="btn btn-secondary" href="cv.html">Go to my CV</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+</main>
+<footer class="bg-secondary text-light text-center py-3">
+    <p>Made in 2023 by CF. All rights reserved.</p>
+</footer>
 </body>
 </html>

@@ -7,13 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <style>
     body {
-      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    }
+    main {
+      flex: 1; /* Grow and take available space */
     }
   </style>
   </head>
 <body>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-light bg-secondary text-light">
+  <div class="container">
+    <h2>Wichtiges beim Arbeiten mit Git</h2>
+  </div>
+</nav>
+
+<main>
 <div class = "container">
-<p class="text-secondary fs-1 fw-bolder">Wichtiges beim Arbeiten mit Git</p>
 <p class="text-secondary fs-3">Typischer Ablauf, wenn online Repo existiert</p>
 <ol>
   <li>git clone [url]: zum Klonen eines online Repos</li>
@@ -79,6 +93,12 @@
   </ul>
 </ul>
 </div>
+</main>
+
+<footer class="bg-secondary text-light text-center py-3">
+  <p>Made in 2023 by CF. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
 
