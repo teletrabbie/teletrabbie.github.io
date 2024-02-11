@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "tarmed.html",
+    "href": "tarmed.html",
+    "title": "Tarmed",
+    "section": "",
+    "text": "Text"
+  },
+  {
+    "objectID": "drg.html",
+    "href": "drg.html",
+    "title": "SwissDRG",
+    "section": "",
+    "text": "Text"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über diese Website",
+    "section": "",
+    "text": "Diese Website wurde im ersten Halbjahr 2024 von Christian Franke erstellt. Es handelt sich um eine Quarto Website. Mehr zu Quarto websites findest Du unter https://quarto.org/docs/websites.\nDiese Seite habe ich im sechsten Semester meines Bachelors-Studiums Medizininformatik an der Berner Fachhochschule erstellt. Zuvor hatten wir im Schwerpunkt “Advanced Data Processing” bereits R-Markdown kennengelernt und nach einem R Studio Update bin ich auf Quarto gestossen. Nun wollte ich wissen, was es mit Quarto auf sich hat. Da ich mir bereits ein Jupyter Notebook für den Mathe-2-Kurs vorgenommen hatte, probierte ich Quarto als Website-Zusammenfassung des Moduls Abrechnungssysteme aus.\n\nMini-Log\n\n08.02.24: Quarto Website wurde aufgesetzt. Nach kurzer Recherche konnte ich die Struktur anpassen. Zu Beginn sind keine HTML, CSS oder JavaScript Kenntnisse nötig. Quarto liefert eine Basisfunktionalität mit. Die YAML-Files sind einfach anpassbar. Der Inhalt der Quarto-Markdown-Files (ohne R- oder Python-Skripte) ist recht einfach: Markdown halt!"
+  }
+]
