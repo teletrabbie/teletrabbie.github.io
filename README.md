@@ -1,2 +1,3 @@
 # teletrabbie.github.io
-This is my personal GitHub website to gather some practical experiences in web development and data science.
+This was my first personal GitHub website to gather some practical experiences in web development and data science.
+In 2024 I got to know Quarto and tried some Quarto stuff on Quarto Pub.
