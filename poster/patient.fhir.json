@@ -1,0 +1,18 @@
+{
+    "resourceType": "Patient",
+    "identifier": [
+        {
+            "use": "official",
+            "value": "123456789"
+        }
+    ],
+    "name": [
+        {
+            "use": "official",
+            "family": "Franke",
+            "given": ["Christian"]
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1984-03-16"
+}
