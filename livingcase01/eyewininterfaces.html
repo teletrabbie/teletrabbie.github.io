@@ -20,23 +20,24 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-light bg-secondary text-light">
-    <div class="container">
-        <h2>Dokumentation der Schnittstellen, die im Rahmen eines Projektes mit Eschmann-Contactlinsen AG entstanden sind.</h2>
-    </div>
+<!-- Navigation Bar-->
+<nav class="navbar sticky-top navbar-light justify-content-center" style="background-color: #6e757d;">
+    <a class="navbar-nav nav-link active" style="color: #FFFFFF" href="#">Home</a>
+    <a class="navbar-nav nav-link active" style="color: #FFFFFF; margin-left: 30px" href="#Benutzerdokumentation">Benutzerdokumentation</a>
+    <a class="navbar-nav nav-link active" style="color: #FFFFFF; margin-left: 30px" href="#Technisches">Technisches</a>
 </nav>
 
 <!-- Main Content -->
 <main>
 <div class = "container mt-5">
+    <p class="fs-1">Dokumentation der Schnittstellen, die im Rahmen eines Projektes mit Eschmann-Contactlinsen AG entstanden sind.</p>
     <p class="text-secondary fs-3">Einleitung</p>
     <ul>
         <li>Erstellt von Christian Franke im Herbst 2023</li>
         <li>Die Applikation entstand im Rahmen des Moduls "Living Case 1" im Bachelorstudiengang Medizin-Informatik an der Berner Fachhochschule.</li>
         <li>Auftraggeber ist <a href="https://eschmann-contactlinsen.ch/" target="_blank">Eschmann-Contactlinsen AG</a> aus Bern.</li>
     </ul>
-    <p class="text-secondary fs-3">Benutzerdokumentation</p>
+    <p class="text-secondary fs-3" id="Benutzerdokumentation">Benutzerdokumentation</p>
 
     <!-- Screenshot 01 -->
     <div class ="container d-flex justify-content-center">
@@ -224,9 +225,15 @@
 
     <p class="text fs-6">Aktuell werden die Kundendaten nur an die Schnittstelle der <a href="https://www.pentacam.com/de" target="_blank">Oculus Pentacam</a> übertragen.</p>
 
-    <p class="text-secondary fs-3">Technisches</p>
+    <p class="text-secondary fs-3" id="Technisches">Technisches</p>
     <ul>
         <li>Das Java-Maven-Projekt wurde mit IntelliJ IDEA 2022.1.2 realisiert.</li>
+        <li>Die jar-Datei wurde in die Datei "eyewin Datentransfer.exe" umgewandelt.
+            Die exe-Datei kann in ein beliebiges Verzeichnis in Windows abgelegt werden.
+            <b>Wichtig ist nur, dass sich ein JRE-Ordner</b> (z.B.
+                <a href="https://aws.amazon.com/de/corretto" target="_blank">Coretto</a>
+                ) <b>im gleichen Verzeichnis befindet.</b>
+        </li>
         <li>Dependencies</li>
         <ul>
             <li>org.openjfx</li>
