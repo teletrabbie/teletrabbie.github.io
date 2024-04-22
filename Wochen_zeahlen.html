@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wochen zählen</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;    
+        }
+        table {
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .result {
+            text-align: center;
+        }
+        td {
+            padding: 5px;
+        }
+        #nextDate th {
+            width: 100px;
+        }
+        #nextDate {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wochen zählen</h1>
+    <table>
+        <tr>
+            <td>Datum der letzten Spritze</td>
+            <td><input type="date" id="dateSince"></td>
+        </tr>
+        <tr>
+            <td>Wochen seit der letzten Spritze</td>
+            <td class="result" id = "dateSinceResult"></td>
+        </tr>
+    </table>
+
+    <!--<p>Datum von heute in Zukunft für nächste Spritze:</p>
+    <table id="nextDate">
+        <th>Woche</th>
+        <th>Datum</th>
+    </table>-->
+    <script>
+        let initDate = document.querySelector("#dateSince");
+        initDate.setAttribute("value", "2024-01-01"); 
+    </script>
+
+    <script>
+        let dateSince = document.querySelector("#dateSince");
+        function calcWeeksSince(){
+            let dateInput = new Date(dateSince.value);
+            let now = new Date();
+            let weeksSince = now.getTime() - dateInput.getTime();
+            weeksSince = (weeksSince / 1000 / 60 / 60 / 24 - 0.5) / 7;
+            document.querySelector("#dateSinceResult").innerText = Math.floor(weeksSince*10)/10;
+        }
+
+        calcWeeksSince();
+        dateSince.addEventListener("change", calcWeeksSince);
+    </script>
+    <script>
+        const nextDates = document.querySelector("nextDate");
+        //let n = "<td>8</td>";
+        //nextDates.append(n);
+    </script>
+</body>
+</html>
