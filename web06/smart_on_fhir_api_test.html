@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART on FHIR API Test</title>
+ </head>
+<body>
+    <p>In der Browser-Console und dem Netzwerk-Tab werden die FHIR Objekte angzeigt.</p>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+    <script>
+        //create FHIR-Smart-API-Connection
+        const client = FHIR.client("https://r3.smarthealthit.org");
+
+        //Fetch "all" Patients
+        client.request("Patient")
+            .then(console.log)
+            .catch(console.error);
+        
+        //Get one Patient
+        client.request("Patient/2e27c71e-30c8-4ceb-8c1c-5641e066c0a4")
+            .then(console.log)
+            .catch(console.error);            
+
+    </script>
+ </html>
