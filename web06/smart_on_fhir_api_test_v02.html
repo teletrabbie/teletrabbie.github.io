@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART on FHIR API Test</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+ </head>
+<body>
+    <p>SMART on FHIR API Test</p>
+    <button id="showPatient">Show patient data</button><br><br>
+    <div id="patNameFamily"></div>
+    <div id="patGender"></div>
+    <div id="patBirthDate"></div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+    <script>
+        //create FHIR-Smart-API-Connection
+        const client = new FHIR.client({
+            serverUrl: "https://r3.smarthealthit.org",
+            tokenResponse: {
+                patient: "2e27c71e-30c8-4ceb-8c1c-5641e066c0a4"
+            }
+        });
+        
+        //Get one Patient
+        const pt = client.request(`Patient/${client.patient.id}`);
+
+        // show patient in console
+        pt.then(console.log)
+            .catch(console.error);
+
+        // render patient to html
+        function render(){
+            pt.then(p => {
+            document.querySelector('#patNameFamily').innerText = p.name[0].family;
+            document.querySelector('#patGender').innerText = p.gender;
+            document.querySelector('#patBirthDate').innerText = p.birthDate;
+        });
+        }
+        
+        // cklick the button
+        document.querySelector('#showPatient').addEventListener('click', render);
+    </script>
+ </html>
