@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        /* Customize the appearance of your countdown timer here */
+        .countdown {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+        }
+        body {
+            background-color: #112940;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown" id="countdown"></div>
+
+    <script>
+        // Set the target date
+        const targetDate = new Date("2024-06-01T12:15:00");
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `Öise ersts schpiu a dr SM in <br><br>${days} Taag ${hours} Stung ${minutes} Minut ${seconds} Sekund`;
+            } else {
+                document.getElementById("countdown").innerHTML = "Countdown DOWN!";
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial update
+    </script>
+</body>
+</html>
