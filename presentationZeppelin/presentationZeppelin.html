@@ -559,12 +559,32 @@
 </section>
 <section id="demo" class="slide level2">
 <h2>Demo</h2>
-<p>Seit 04. September 2024 gibt es Version 0.11.2</p>
+<div class="fragment">
+<p>Einfacher Docker Container</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href=""></a>docker run -p 8080:8080 --rm -d apache/zeppelin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><img data-src=".\src/dockerSize.png"></p>
+</div>
 <p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href=""></a>docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.11.2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-
-<img data-src=".\src/dockerSize.png" class="r-stretch"><div class="footer">
+<div class="fragment">
+<p>Container für Version 0.11.2 mit Speicherung der Notebooks</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href=""></a>docker run -p 8080:8080 --rm -v $PWD/notebook:/notebook -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin -d apache/zeppelin:0.11.2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="footer">
+<p>Advanced Data Management 2024/25 | Christian Franke</p>
+</div>
+</section>
+<section id="demo-1" class="slide level2">
+<h2>Demo</h2>
+<ul>
+<li>Notebooks haben Menuleiste oben</li>
+<li>Paragraph beginnt mit <code>%</code> und dem Interpreterkürzel, z.B. <code>%md</code> für Markdown oder <code>%r.ir</code> für R-Code</li>
+<li>Paragraphen können einzeln oder gemeinsam ausgeführt werden</li>
+<li>Paragraphen mit diversen Einstellmöglichkeiten</li>
+<li>teilweise mit interaktiven Schaltflächen innerhalb der Paragraphen</li>
+</ul>
+<div class="footer">
 <p>Advanced Data Management 2024/25 | Christian Franke</p>
 </div>
 </section>
