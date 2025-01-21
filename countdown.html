@@ -23,26 +23,29 @@
 
     <script>
         // Set the target date
-        const targetDate = new Date("2024-06-01T12:15:00");
+        const targetDate = new Date("2025-06-12T10:00:00");
+        const wbucDate = new Date("2025-11-16T10:00:00");
 
         function updateCountdown() {
             const now = new Date();
             const timeLeft = targetDate - now;
+            const wbucLeft = wbucDate - now;
 
-            if (timeLeft > 0) {
+            if (timeLeft > 0 || wbucLeft > 0) {
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                const wbucDays = Math.floor(wbucLeft / (1000 * 60 * 60 * 24));
+                //const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                //const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                //const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = `Öise ersts schpiu a dr SM in <br><br>${days} Taag ${hours} Stung ${minutes} Minut ${seconds} Sekund`;
+                document.getElementById("countdown").innerHTML = `Noch ${days} Tage <br><br> und ${wbucDays} Tage`;
             } else {
                 document.getElementById("countdown").innerHTML = "What time is it? Break-Time!!";
             }
         }
 
         // Update the countdown every second
-        setInterval(updateCountdown, 1000);
+        //setInterval(updateCountdown, 1000);
         updateCountdown(); // Initial update
     </script>
 </body>
